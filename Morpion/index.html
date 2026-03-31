@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Morpion</title>
+    <meta charset="UTF-8">
+    <script src = "script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+        <body>
+
+
+            
+            <h1 id = "txt_joueur">
+                Morpion
+            </h1>
+
+            <table>
+                <tr>
+                    <td id = "case1" onclick="Case(1)">
+                        
+                    </td>
+                    <td id = "case2" onclick="Case(2)">
+                        
+                    </td>
+                    <td id = "case3" onclick="Case(3)">
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id = "case4" onclick="Case(4)">
+                        
+                    </td>
+                    <td id = "case5" onclick="Case(5)">
+                        
+                    </td>
+                    <td id = "case6" onclick="Case(6)">
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id = "case7" onclick="Case(7)">
+                        
+                    </td>
+                    <td id = "case8" onclick="Case(8)">
+                        
+                    </td>
+                    <td id = "case9" onclick="Case(9)">
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            <p>
+                <center>
+                    <button class="button button1" id="bouton_jouer" onclick="init('1v1')">Jouer en 1v1</button>
+
+                    <button class="button button1" id="bouton_IA" onclick="init('PvsIA')">Jouer VS IA</button>
+
+                    <button class="button button1" id="bouton_IA_vs_IA" onclick="init('IAvsIA')">IA VS IA</button>
+               
+                    <button class="button button2" id="bouton_mode" onclick="showModes()" style="display:none;">Changer de mode</button>
+                </center>
+            </p>
+
+
+
+            <h1 class="form__group field">
+                <input type="text" class="form__field" placeholder="Nom joueur 1" name="j1" id='j1' onblur="noms_joueurs()" required />
+                <label for="j1" class="form__label"></label><Br></Br>
+                <input type="text" class="form__field" placeholder="Nom joueur 2" name="j2" id='j2' onblur="noms_joueurs()" required />
+                <label for="j2" class="form__label" id="j2"></label><Br></Br>  
+            </h1> 
+
+
+        </body>
+</html>
