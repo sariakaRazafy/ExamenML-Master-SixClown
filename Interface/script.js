@@ -2,13 +2,28 @@
 // 1. DONNÉES DES MODÈLES (BASELINE + EXPERT)
 // ==========================================
 const modelData = {
-    "baseline": { // Ta Régression Logistique (ML Engineer 1)
-        "coefficients": [0.09498130164575755, -0.09988397778240332, -0.35868873966044185, 0.26298471774455123, 0.10078090814195922, -0.23701478760036834, -0.3449655084862486, 0.20726734490857637, 0.038007216603949075, -0.9813474856580717, -0.4472451267638162, 0.14126620821817726, 0.16536085960318395, -0.1654538566878094, -0.38888641342322006, 0.10572457923905339, 0.20379073185835528, -0.17040751286222786], 
-        "intercept": 0.6599361783112832
+    "baseline": {
+        "x_wins": {
+            "coefficients": [
+                0.09498130164575755, -0.09988397778240332, -0.35868873966044185, 
+                0.26298471774455123, 0.10078090814195922, -0.23701478760036834, 
+                -0.3449655084862486, 0.20726734490857637, 0.038007216603949075, 
+                -0.9813474856580717, -0.4472451267638162, 0.14126620821817726, 
+                0.16536085960318395, -0.1654538566878094, -0.38888641342322006, 
+                0.10572457923905339, 0.20379073185835528, -0.17040751286222786
+            ],
+            "intercept": 0.6599361783112832
+        }
     },
-    "expert": { // Importance des features issue du Random Forest de Tsiory (ML Engineer 2)
-        // Poids stratégiques par case (0 à 8). Le centre (4) et les coins sont favorisés.
-        "weights": [0.15, 0.10, 0.15, 0.10, 0.25, 0.10, 0.15, 0.10, 0.15] 
+    "expert": {
+        "weights": [
+            0.048377295983108165, 0.06429462344770356, 0.06048591884286639, 
+            0.04915409226184792, 0.05378346572834543, 0.06460293221142872, 
+            0.05405379464474882, 0.05224727780194624, 0.03766010936466163, 
+            0.06367183623057883, 0.05310996210400699, 0.048844596963792314, 
+            0.05418001089743706, 0.06442989402830822, 0.058852447456592814, 
+            0.05219542033226616, 0.055313916917147266, 0.06474240478321343
+        ]
     }
 };
 
@@ -38,11 +53,12 @@ function getFeatures(jeu) {
 
 // Calcul pour le mode Normal (Baseline Logistic Regression)
 function predictBaseline(features) {
-    let z = modelData.baseline.intercept;
+    // Note l'ajout de .x_wins ici
+    let z = modelData.baseline.x_wins.intercept; 
     for (let i = 0; i < features.length; i++) {
-        z += features[i] * modelData.baseline.coefficients[i];
+        z += features[i] * modelData.baseline.x_wins.coefficients[i];
     }
-    return 1 / (1 + Math.exp(-z)); // Fonction Sigmoïde
+    return 1 / (1 + Math.exp(-z));
 }
 
 // L'IA analyse chaque case vide et choisit la meilleure selon le mode
