@@ -58,10 +58,12 @@
                 <center>
                     <button class="button button1" id="bouton_jouer" onclick="init('1v1')">Jouer en 1v1</button>
 
-                    <button class="button button1" id="bouton_IA" onclick="init('PvsIA')">Jouer VS IA</button>
+                    <button class="button button1" id="bouton_IA" onclick="init('PvsIA', 'baseline')">IA Normale</button>
+
+                    <button class="button button1" id="bouton_IA_expert" onclick="init('PvsIA', 'expert')">IA Expert </button>
 
                     <button class="button button1" id="bouton_IA_vs_IA" onclick="init('IAvsIA')">IA VS IA</button>
-               
+
                     <button class="button button2" id="bouton_mode" onclick="showModes()" style="display:none;">Changer de mode</button>
                 </center>
             </p>
