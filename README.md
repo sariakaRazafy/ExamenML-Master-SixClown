@@ -115,8 +115,7 @@ En résumé, le mode Hybride **combine le meilleur des deux** : la rigueur tacti
 
 ## Vidéo de présentation
   
-🔗 [Lien vers la vidéo — à compléter]
-
+https://drive.google.com/drive/folders/1VvJq7eA7T2-dEnxAoDvlxpM9Kx3AwrYA?usp=drive_link
 ---
 
 ## Hackathon
