@@ -137,7 +137,7 @@ form__group {
     font-family: inherit;
     width: 15%;
     border: 0;
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
     outline: 0;
     font-size: 1.3rem;
     padding: 7px 0;
